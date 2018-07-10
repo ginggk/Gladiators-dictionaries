@@ -31,6 +31,11 @@ def heal(gladiator):
     """{dictionary} -> None
     Returns the increased health and the cost of rage.
     """
+    if gladiator['rage'] > 10:
+        gladiator['health'] += gladiator['rage']
+        gladiator['rage'] -= 10
+    else:
+        gladiator
 
 
 def is_dead(gladiator):
