@@ -50,8 +50,8 @@ def test_heal_10_health():
 
     heal(attacker)
 
-    assert attacker['health'] == 55
-    assert attacker['rage'] == 20
+    assert attacker['health'] == 50
+    assert attacker['rage'] == 30
 
 
 def test_heal_0_health():
