@@ -18,9 +18,13 @@ def attack(attacker, defender):
     Returns the damage done on the defender and changes the rage.
     """
     if randint(1, 100) < attacker['rage']:
-        defender['health'] - (attacker['damage high'], attacker['damage low'])
+        defender['health'] -= randint(attacker['damage high'],
+                                      attacker['damage low'])
+        attacker['rage'] = 0
     else:
-        defender['health'] - randint
+        defender['health'] -= randint(attacker['damage high'],
+                                      attacker['damage low'])
+        attacker['rage'] += 15
 
 
 def heal(gladiator):
