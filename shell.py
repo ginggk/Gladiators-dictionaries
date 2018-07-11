@@ -46,6 +46,7 @@ def gladiator():
             print("Gladiator 2 has died, always in our hearts.")
             break
 
+        print("-----------------------------------")
         print("*GLADIATOR 2*")
         print('Gladiator 1:', gladiator_1['health'], "HP", "||",
               gladiator_1['rage'], "Rage")
@@ -63,7 +64,8 @@ def gladiator():
                 print("*GLADIATOR 1*")
                 break
             elif response == 'pass':
-                print("You have passed to Gladiator 2!")
+                print("You have passed to Gladiator 1!")
+                print("*GLADIATOR 1*")
                 break
             elif response == 'quit':
                 print("Hope you come to battle later!!")
@@ -80,6 +82,33 @@ def gladiator():
 
 
 def main():
+    print('''                           ,--.
+                          {    }
+                          K,   }
+                         /  `Y`
+                    _   /   /
+                   {_'-K.__/
+                     `/-.__L._
+                     /  ' /`\_}
+                    /  ' /     
+            ____   /  ' /
+     ,-'~~~~    ~~/  ' /_
+   ,'             ``~~~%%',
+  (                     %  Y
+ {                      %% I
+{      -                 %  `.
+|       ',                %  )
+|        |   ,..__      __. Y
+|    .,_./  Y ' / ^Y   J   )|
+\           |' /   |   |   ||
+ \          L_/    . _ (_,.'(
+  \,   ,      ^^""' / |      )
+    \_  \          /,L]     /
+      '-_`-,       ` `   ./`
+         `-(_            )
+             ^^\..___,.--`
+''')
+
     gladiator()
 
 
