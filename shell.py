@@ -9,6 +9,13 @@ def gladiator():
 
     print("*GLADIATOR 1*")
     while True:  # whole game play loop
+        if core.is_dead(gladiator_1):
+            print("!GLADIATOR 2 WINS!")
+            break
+        if core.is_dead(gladiator_2):
+            print("!GLADIATOR 1 WINS!")
+            break
+
         while True:  # everything dealing with gladiator 1s turn
             print('Gladiator 1:', gladiator_1['health'], "HP", "||",
                   gladiator_1['rage'], "Rage")
