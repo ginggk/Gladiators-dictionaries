@@ -10,10 +10,7 @@ def gladiator():
     print("*GLADIATOR 1*")
     while True:  # whole game play loop
         if core.is_dead(gladiator_1):
-            print("!GLADIATOR 2 WINS!")
-            break
-        if core.is_dead(gladiator_2):
-            print("!GLADIATOR 1 WINS!")
+            print("~~~GLADIATOR 2 WINS~~~")
             break
 
         while True:  # everything dealing with gladiator 1s turn
@@ -38,6 +35,10 @@ def gladiator():
                 print("Player 1's Current Health:", gladiator_1['health'])
             else:
                 print("Invalid choice, pick a valid choice to fight!!")
+        if core.is_dead(gladiator_2):
+            print("~~~GLADIATOR 1 WINS~~~")
+            break
+
         print("*GLADIATOR 2*")
         print('Gladiator 1:', gladiator_1['health'], "HP", "||",
               gladiator_1['rage'], "Rage")
@@ -62,7 +63,7 @@ def gladiator():
             else:
                 print("Invalid choice, pick a valid choice to fight!!")
 
-        print("*GLADIATOR 1*")
+            print("*GLADIATOR 1*")
 
 
 def main():
