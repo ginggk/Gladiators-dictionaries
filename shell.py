@@ -18,7 +18,7 @@ def gladiator():
         ).strip()
         if message == 'The Enclosed Helmet' or message == '1':
             print("You have chosen the mighty ",
-                  core.armor('helmet' ['Enclosed Helmet']))
+                  core.armor('Enclosed Heart' ['nsame']))
             break
 
     print("*GLADIATOR 1*")
