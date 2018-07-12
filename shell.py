@@ -1,11 +1,25 @@
 import core
 
+from time import sleep
+
 
 def gladiator():
     print("----THE HAVOC STADIUM----")
+
     print("....setting up the game....")
+
     gladiator_1 = core.new_gladiator(100, 0, 10, 50)
     gladiator_2 = core.new_gladiator(100, 0, 5, 60)
+
+    # print("*GLADIATOR 1*")
+    while True:
+        message = input(
+            "**Before you start, choose your armor to battle with: \n *The Enclosed Helmet![1] \n *The Pavise Shield![2] \n *The Girdle of MIGHT![3] \n"
+        ).strip()
+        if message == 'The Enclosed Helmet' or message == '1':
+            print("You have chosen the mighty ",
+                  core.armor('helmet' ['Enclosed Helmet']))
+            break
 
     print("*GLADIATOR 1*")
     while True:  # whole game play loop
@@ -21,21 +35,21 @@ def gladiator():
                   gladiator_2['rage'], "Rage")
 
             response = input(
-                "What would you lke to do? \n >> attack \n >> pass \n >> quit \n >> heal \n  "
+                "What would you lke to do? \n >> [a]ttack \n >> [p]ass \n >> [q]uit \n >> [h]eal \n  "
             ).strip().lower()
-            if response == 'attack':
+            if response == 'attack' or response == 'a':
                 core.attack(gladiator_1, gladiator_2)
                 print("You attacked Player 2, their health is now decreased!")
                 print("Player 2's Health:", gladiator_2['health'])
                 break
-            elif response == 'pass':
+            elif response == 'pass' or response == 'p':
                 print("You have passed to Gladiator 2!")
                 break
-            elif response == 'quit':
+            elif response == 'quit' or response == 'q':
                 print("Hope you come to battle later!!")
                 print("***QUITTING***")
                 return
-            elif response == 'heal':
+            elif response == 'heal' or response == 'h':
                 core.heal(gladiator_1)
                 print("You have healed your health!")
                 print("Player 1's Current Health:", gladiator_1['health'])
@@ -55,26 +69,27 @@ def gladiator():
 
         while True:  # everything with the second glads turn
             response = input(
-                "What would you lke to do? \n >> attack \n >> pass \n >> quit \n >> heal \n  "
+                "What would you lke to do? \n >> [a]ttack \n >> [p]ass \n >> [q]uit \n >> [h]eal \n  "
             ).strip().lower()
-            if response == 'attack':
+            if response == 'attack' or response == 'a':
                 core.attack(gladiator_2, gladiator_1)
                 print("You attacked Player 1, their health is now decreased!")
                 print("Player 1's Health:", gladiator_1['health'])
                 print("*GLADIATOR 1*")
                 break
-            elif response == 'pass':
+            elif response == 'pass' or response == 'p':
                 print("You have passed to Gladiator 1!")
                 print("*GLADIATOR 1*")
                 break
-            elif response == 'quit':
+            elif response == 'quit' or response == 'q':
                 print("Hope you come to battle later!!")
                 print("***QUITTING***")
                 return
-            elif response == 'heal':
+            elif response == 'heal' or response == 'h':
                 core.heal(gladiator_1)
                 print("You have healed your health!")
                 print("Player 2's Current Health:", gladiator_2['health'])
+                print("*GLADIATOR 1*")
             else:
                 print("Invalid choice, pick a valid choice to fight!!")
 
@@ -82,6 +97,13 @@ def gladiator():
 
 
 def main():
+    # gladiator()
+    sleep(2)
+    print("             What lies behind us")
+    print("                  and what lies before us")
+    print("                     are small matters;")
+    print("                         compared to what lies within us..")
+
     print('''                           ,--.
                           {    }
                           K,   }
@@ -106,8 +128,9 @@ def main():
     \_  \          /,L]     /
       '-_`-,       ` `   ./`
          `-(_            )
-             ^^\..___,.--`
-''')
+             ^^\..___,.--`''')
+
+    sleep(2)
 
     gladiator()
 
